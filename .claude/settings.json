@@ -1,0 +1,42 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "npx --yes --prefer-offline @grum-os/cli hook claude-post-tool",
+            "timeout": 60
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "npx --yes --prefer-offline @grum-os/cli hook claude-pre-tool",
+            "timeout": 120
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "npx --yes --prefer-offline @grum-os/cli hook claude-stop",
+            "timeout": 120
+          }
+        ]
+      }
+    ]
+  },
+  "enabledMcpjsonServers": [
+    "grum"
+  ]
+}

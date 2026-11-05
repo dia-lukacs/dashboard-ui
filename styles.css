@@ -2,6 +2,7 @@
   /* Colors */
   --background: #7229e1;
   --typography: #f2f2f2;
+  --handle: #ffd400;
 
   /* Radius */
   --corner-base: 8px;
@@ -33,6 +34,21 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* Positioned off the button so the button itself stays centred. */
+.stack {
+  position: relative;
+}
+
+.handle {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin: 12px 0 0;
+  transform: translateX(-50%);
+  color: var(--handle);
+  font: var(--button-font);
 }
 
 .gomb {
