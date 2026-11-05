@@ -1,0 +1,47 @@
+:root {
+  /* Colors */
+  --background: #7229e1;
+  --typography: #f2f2f2;
+
+  /* Radius */
+  --corner-base: 8px;
+
+  /* Text styles */
+  --button-font: 400 14px/18px "Inter", system-ui, sans-serif;
+
+  /* Effect styles */
+  --button-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: #fff;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+main {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gomb {
+  padding: 8px 16px;
+  border: 0;
+  border-radius: var(--corner-base);
+  background: var(--background);
+  color: var(--typography);
+  font: var(--button-font);
+  box-shadow: var(--button-shadow);
+  cursor: pointer;
+}
